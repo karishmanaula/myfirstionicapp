@@ -15,7 +15,9 @@ export class HomePage {
   constructor(private todoService:TodoServiceProvider,public navCtrl: NavController,private alertController:AlertController) {
     this.todos=this.todoService.getTodos();
   }
-
+  archievedTodo(todoIndex){
+    this.todoService.archievedTodo(todoIndex );
+  }
 
  goToArchivePage(){
    this.navCtrl.push(ArchievedTodosPage );
