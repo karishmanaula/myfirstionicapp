@@ -16,7 +16,7 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-list [reorder]="reorderIsEnabled"> 
+  <ion-list [reorder]="reorderIsEnabled" (ionItemReorder)="itemReordered($event)"> 
     <ion-item-sliding *ngFor ="let todo of todos">
     <ion-item>{{todo}}</ion-item>
     <ion-item-options side="right">
@@ -27,9 +27,14 @@
    
     </ion-item-sliding>
      
-      <ion-item> TASKS2</ion-item>
+      <!--<ion-item> TASKS2</ion-item>
       <ion-item>TASKS3</ion-item>
-      <ion-item> TASKS4</ion-item>
+      <ion-item> TASKS4</ion-item> -->
   </ion-list>
+  <ion-fab right bottom>
+  <button ion-fab (click)="goToArchivePage()" > 
+    <ion-icon name="archive"></ion-icon>
+     </button> 
+  </ion-fab>
 </ion-content>
  
