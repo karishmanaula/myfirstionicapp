@@ -32,4 +32,7 @@ addTodo(todoText)
   this.todos.push(todoText);
   console.log(this.todos)
 }
+editTodo(todo,todoIndex){
+  this.todos[todoIndex]=todo;
+} 
 }
